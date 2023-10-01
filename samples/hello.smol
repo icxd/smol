@@ -1,0 +1,8 @@
+(defrecord Person (
+    (name :string) ; smol supports optional type annotations, they do not affect the runtime
+    (age :int)))
+
+(defun main ()
+    (let (person (Person "John" 42))
+        (println (-> person name)) ; the `->` function is how you access record fields
+        (println (-> person age))))
